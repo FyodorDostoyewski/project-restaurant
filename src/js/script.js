@@ -174,17 +174,22 @@
               // reduce price variable
             }
           }
-          const optionImage = thisProduct.imageWrapper.querySelector(select.paramId-optionId);
+          const optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId);
           console.log(optionImage);
-          
+          if(optionImage) {
+            if(optionSelected) {
+              optionImage.classList.add('active');
+            }else {
+              optionImage.classList.remove('active');
+            }
+          }
         }
-      }
-      // update calculated price in the HTML
-      thisProduct.priceElem.innerHTML = price;
+        // update calculated price in the HTML
+        thisProduct.priceElem.innerHTML = price;
 
+      }
     }
   }
-
 
   const app = {
     initMenu: function(){
