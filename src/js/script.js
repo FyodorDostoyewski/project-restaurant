@@ -395,9 +395,48 @@
 
       console.log('adding product', menuProduct);
 
+      thisCart.products.push(menuProduct);
+      console.log(new CartProduct(menuProduct, generatedDOM));
+
 
     }
   }
+
+  class CartProduct{
+    constructor(menuProduct, element, amount, price)
+    {
+      const thisCartProduct = this;
+
+      thisCartProduct.menuProduct = menuProduct;
+      thisCartProduct.element = element;
+      thisCartProduct.amount = amount;
+      thisCartProduct.price = price;
+
+      thisCartProduct.initAmountWidget();
+      thisCartProduct.getElements(element);
+      console.log('thisCartProduct', thisCartProduct);
+    }
+
+    getElements(element){
+      const thisCartProduct = this;
+      thisCartProduct.dom = [];
+
+      thisCartProduct.dom.wrapper = element;
+      thisCartProduct.dom.amountWidget = thisCartProduct.dom.wrapper.querySelector(select.widgets.amount.input);
+      thisCartProduct.dom.price = thisCartProduct.dom.wrapper.querySelector(select.cartProduct.price);
+      thisCartProduct.dom.edit = thisCartProduct.dom.wrapper.querySelector(select.cartProduct.edit);
+      thisCartProduct.dom.remove = thisCartProduct.dom.wrapper.querySelector(select.cartProduct.remove);
+    }
+    initAmountWidget(){
+      const thisCartProduct = this;
+
+      thisCartProduct.amountWidget = new AmountWidget(thisCartProduct.amountWidget);
+      thisCartProduct.amountWidget.addEventListener('updated', function(){
+
+      });
+    }
+  }
+
 
   const app = {
     initMenu: function(){
