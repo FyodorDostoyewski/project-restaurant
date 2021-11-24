@@ -437,6 +437,11 @@
         thisCart.dom.totalPrice.innerHTML = 0;
         thisCart.dom.deliveryFee.innerHTML = 0;
       }
+
+      thisCart.totalNumber = totalNumber;
+      thisCart.subtotalPrice = subtotalPrice;
+      thisCart.totalPrice = subtotalPrice + deliveryFee;
+
     }
 
     remove(cartProduct){
