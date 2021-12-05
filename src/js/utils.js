@@ -1,20 +1,15 @@
 /* global Handlebars, dataSource */
-//import app from './app';
-
 export const utils = {}; // eslint-disable-line no-unused-vars
-
 utils.createDOMFromHTML = function(htmlString) {
   let div = document.createElement('div');
   div.innerHTML = htmlString.trim();
   return div.firstChild;
 };
-
 utils.createPropIfUndefined = function(obj, key, value = []){
   if(!obj.hasOwnProperty(key)){
     obj[key] = value;
   }
 };
-
 utils.serializeFormToObject = function(form){
   let output = {};
   if (typeof form == 'object' && form.nodeName == 'FORM') {
@@ -66,7 +61,9 @@ utils.numberToHour = function(number){
 utils.hourToNumber = function(hour){
   const parts = hour.split(':');
 
+
   return parseInt(parts[0]) + parseInt(parts[1])/60;
+
 };
 
 utils.dateToStr = function(dateObj){

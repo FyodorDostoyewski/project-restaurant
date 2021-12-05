@@ -173,6 +173,11 @@
       }
 
     }
+
+    &.selected {
+      background-color: rgb(77, 145, 28);
+      
+    }
   }
 
   [data-table="1"] {
@@ -197,4 +202,4 @@
 .booking-options {
   @include flex(row, flex-start, space-between);
   margin: ($base-size * 4) auto;
-} 
+}
