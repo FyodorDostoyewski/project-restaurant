@@ -1,6 +1,6 @@
 .header {
   padding: ($base-size * 5) 0 ($base-size * 8) 0;
-  background: $color-dark;
+  background: $color-main;
   color: $color-light;
 
   &__wrapper {
@@ -15,8 +15,10 @@
 
   &__title {
     margin: 0 0 $base-size 0;
-    font-size: ($base-size * 4);
-    font-family: $font-header;
+    font-size: ($base-size * 3);
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Smooch', cursive;
     font-weight: $font-light;
     text-transform: uppercase;
 
@@ -42,7 +44,7 @@
 
   a {
     @extend .h2;
-    color: $color-main;
+    color: #C1F4F3;
     text-decoration: none;
     margin-right: ($base-size * 2);
     text-align: center;
@@ -53,6 +55,7 @@
 
     &.active {
       background: lighten($color-dark, 75%);
+      color: lighten($color-dark, 20%);
     }
 
   }
