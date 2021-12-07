@@ -72,7 +72,7 @@ class CartProduct{
   }
 
   initActions(){
-    const thisCartProduct=this;
+    const thisCartProduct = this;
 
     thisCartProduct.dom.remove.addEventListener('click', function(){
       thisCartProduct.remove();
