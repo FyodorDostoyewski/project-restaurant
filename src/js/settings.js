@@ -125,7 +125,7 @@ export const settings = {
   },
   // CODE ADDED END
   db: {
-    url: '//localhost:3131',
+    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
     products: 'products',
     orders: 'orders',
     bookings: 'bookings',
@@ -144,6 +144,6 @@ export const templates = {
   cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
 
   bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
-  
+
   home: Handlebars.compile(document.querySelector(select.templateOf.home).innerHTML)
 };
