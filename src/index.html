@@ -7,10 +7,7 @@
   <title>Pizzeria</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Corinthia:wght@700&family=Smooch&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Corinthia:wght@700&family=Fuzzy+Bubbles&family=Smooch&display=swap" rel="stylesheet">
    rel="stylesheet">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
@@ -24,8 +21,8 @@
     <div class="container">
       <div class="header__wrapper">
         <div class="logo">
-          <h1 class="logo__title">Mamma<span>Mia!</span></h1>
-          <h2 class="logo__subtitle">the best homemade Italian food</h2>
+          <h1 class="logo__title"><span>Pizza u<br>Adusi!</span></h1>
+          <h2 class="logo__subtitle"><h2>the best Polish pizza</h2>
         </div>
         <div class="main-nav">
           <a href="#home">Home</a>
@@ -320,10 +317,12 @@
           <div class="object table" data-table="1">table-1</div>
           <div class="object table table--round" data-table="2">table-2</div>
           <div class="object table" data-table="3">table-3</div>
+          <div class="object table" data-table="4">table-4</div>
+          <div class="object table" data-table="5">table-5</div>
         </div>
         <div class="booking-options"> <!-- options -->
           <label class="booking-option-title"> <!-- option-row -->
-            People
+            How many People ?
             <div class="widget-amount people-amount"> <!-- widget-amount -->
               <a class="btn-quantity" href="#less"><i class="fas fa-minus"></i></a>
               <input class="amount" type="text" name="people" value="1">
@@ -331,7 +330,7 @@
             </div>
           </label>
           <label class="booking-option-title"> <!-- option-row -->
-            Hours
+            how much time ?
             <div class="widget-amount hours-amount"> <!-- widget-amount -->
               <a class="btn-quantity" href="#less"><i class="fas fa-minus"></i></a>
               <input class="amount" type="text" name="hours" value="1">
@@ -352,6 +351,13 @@
                 <input type="checkbox" name="starter" value="bread">
                 <span class="checkbox__checkmark"></span>
                 Bread
+              </label>
+            </div>
+            <div class="checkbox"> <!-- checkbox -->
+              <label>
+                <input type="checkbox" name="starter" value="bread">
+                <span class="checkbox__checkmark"></span>
+                Chips
               </label>
             </div>
           </div>

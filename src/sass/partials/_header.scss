@@ -1,8 +1,8 @@
 .header {
   padding: ($base-size * 5) 0 ($base-size * 8) 0;
-  background: $color-main;
-  color: $color-light;
-
+  // background: $color-main;
+  // color: $color-light;
+  background-image: url('https://i.postimg.cc/4dWqp6v2/pexels-eneida-nieves-905847.jpg');
   &__wrapper {
     position: relative;
   }
@@ -15,22 +15,16 @@
 
   &__title {
     margin: 0 0 $base-size 0;
-    font-size: ($base-size * 3);
+    font-size: ($base-size * 5);
+    font-weight: $font-bold;
+    text-transform: uppercase;
     font-family: 'Architects Daughter', cursive;
     font-family: 'Corinthia', cursive;
-    font-family: 'Smooch', cursive;
-    font-weight: $font-light;
-    text-transform: uppercase;
-
-    span {
-      font-weight: $font-bold;
-    }
-
   }
 
   &__subtitle {
     margin: 0;
-    font-size: ($base-size * 1.5);
+    font-size: ($base-size * 2);
     font-weight: $font-light;
     font-style: italic;
   }

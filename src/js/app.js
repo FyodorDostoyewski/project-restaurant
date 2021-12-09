@@ -8,7 +8,7 @@ const app = {
     const thisApp = this;
 
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
-    thisApp.navLinks = document.querySelectorAll(select.nav.links);
+    thisApp.navLinks = document.querySelectorAll(select.nav.links + ',' + select.nav.homeLinks);
     const idFromHash = window.location.hash.replace('#/', '');
 
     let pageMatchingHash = thisApp.pages[0].id;
@@ -99,7 +99,7 @@ const app = {
   initHome: function(){
     const thisApp = this;
     const homeWidget = document.querySelector(select.containerOf.home);
-    thisApp.home = new Home(homeWidget);
+    thisApp.home = new Home(homeWidget, thisApp);
   },
 
   init: function(){
@@ -109,14 +109,14 @@ const app = {
     // console.log('classNames:', classNames);
     // console.log('settings:', settings);
     // console.log('templates:', templates);
-
+    thisApp.initHome();
     thisApp.initPages();
     thisApp.initData();
     // thisApp.initMenu();
     // thisApp.initCart();
     thisApp.initCart();
     thisApp.initBooking();
-    thisApp.initHome();
+
   },
 
 };
